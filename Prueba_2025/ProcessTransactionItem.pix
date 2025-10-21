@@ -558,14 +558,424 @@
         <_activityFullName>BR.Core.Base.Container</_activityFullName>
       </AbstractStep>
       <AbstractStep z:Id="i59" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i60" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i61" i:type="ExecutedStep">
+                <Childs />
+                <Id>f82270f2-5969-46d6-85a6-8a21a6c05db3</Id>
+                <Parent z:Ref="i60" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i62">
+                    <PropertyName>Url</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"https://graph.microsoft.com/v1.0/me/drive/root:/RPA/Reportes"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i63">
+                    <PropertyName>Headers</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.Collections" i:type="d11p1:DictionarySettings">
+                      <d11p1:ArgumentsToCompile xmlns:d12p1="http://schemas.datacontract.org/2004/07/BR.Core">
+                        <d12p1:ArgumentItem z:Id="i64">
+                          <d12p1:ArgumentName>Authorization</d12p1:ArgumentName>
+                          <d12p1:Expression>"Bearer "+ vAccessToken</d12p1:Expression>
+                          <d12p1:Type>System.Object</d12p1:Type>
+                        </d12p1:ArgumentItem>
+                      </d11p1:ArgumentsToCompile>
+                    </_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i65">
+                    <PropertyName>ContentResult</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>vRutaReportes</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i66">
+                    <PropertyName>Status</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression></_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId>0</SelectedOptionId>
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text>Carpeta Existe</Text>
+                <_activityFullName>Activities.HTTP.HTTPResponsesWithFile</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i67" i:type="ExecutedStep">
+                <Childs>
+                  <AbstractStep z:Id="i68" i:type="ExecutedStep">
+                    <Childs>
+                      <AbstractStep z:Id="i69" i:type="ExecutedStep">
+                        <Childs />
+                        <Id>bf61a789-bd3d-483a-9c1e-28036fcb8b78</Id>
+                        <Parent z:Ref="i68" />
+                        <PropertyValues>
+                          <PropertyValue z:Id="i70">
+                            <PropertyName>Url</PropertyName>
+                            <_dataType>Expression</_dataType>
+                            <_expression>"https://graph.microsoft.com/v1.0/me/drive/root/children"</_expression>
+                            <_screenShotBase64 i:nil="true" />
+                            <_value i:nil="true" />
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                          <PropertyValue z:Id="i71">
+                            <PropertyName>Headers</PropertyName>
+                            <_dataType>Value</_dataType>
+                            <_expression i:nil="true" />
+                            <_screenShotBase64 i:nil="true" />
+                            <_value xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.Collections" i:type="d15p1:DictionarySettings">
+                              <d15p1:ArgumentsToCompile xmlns:d16p1="http://schemas.datacontract.org/2004/07/BR.Core">
+                                <d16p1:ArgumentItem z:Id="i72">
+                                  <d16p1:ArgumentName>Authorization</d16p1:ArgumentName>
+                                  <d16p1:Expression>"Bearer "+ vAccessToken</d16p1:Expression>
+                                  <d16p1:Type>System.Object</d16p1:Type>
+                                </d16p1:ArgumentItem>
+                              </d15p1:ArgumentsToCompile>
+                            </_value>
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                          <PropertyValue z:Id="i73">
+                            <PropertyName>ContentResult</PropertyName>
+                            <_dataType>Expression</_dataType>
+                            <_expression>vCrearRPAResponse</_expression>
+                            <_screenShotBase64 i:nil="true" />
+                            <_value i:nil="true" />
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                          <PropertyValue z:Id="i74">
+                            <PropertyName>Status</PropertyName>
+                            <_dataType>Expression</_dataType>
+                            <_expression></_expression>
+                            <_screenShotBase64 i:nil="true" />
+                            <_value i:nil="true" />
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                          <PropertyValue z:Id="i75">
+                            <PropertyName>Method</PropertyName>
+                            <_dataType>Value</_dataType>
+                            <_expression i:nil="true" />
+                            <_screenShotBase64 i:nil="true" />
+                            <_value xmlns:d15p1="http://schemas.datacontract.org/2004/07/Activities.HTTP" i:type="d15p1:HTTPResponsesWithFile.TypeMethod">Post</_value>
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                          <PropertyValue z:Id="i76">
+                            <PropertyName>PostData</PropertyName>
+                            <_dataType>Expression</_dataType>
+                            <_expression>"{\"name\":\"RPA\",\"folder\":{},\"@microsoft.graph.conflictBehavior\":\"replace\"}"
+</_expression>
+                            <_screenShotBase64 i:nil="true" />
+                            <_value i:nil="true" />
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                          <PropertyValue z:Id="i77">
+                            <PropertyName>ContenDataType</PropertyName>
+                            <_dataType>Expression</_dataType>
+                            <_expression>"application/json"</_expression>
+                            <_screenShotBase64 i:nil="true" />
+                            <_value i:nil="true" />
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                        </PropertyValues>
+                        <SelectedOptionId>0</SelectedOptionId>
+                        <AutoCloseMode>None</AutoCloseMode>
+                        <EnableStatus>true</EnableStatus>
+                        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                        <RetryCount>-1</RetryCount>
+                        <Text>Crear Carpeta RPA</Text>
+                        <_activityFullName>Activities.HTTP.HTTPResponsesWithFile</_activityFullName>
+                      </AbstractStep>
+                      <AbstractStep z:Id="i78" i:type="ExecutedStep">
+                        <Childs />
+                        <Id>889edc21-baea-4747-bf7a-529cd70f959b</Id>
+                        <Parent z:Ref="i68" />
+                        <PropertyValues>
+                          <PropertyValue z:Id="i79">
+                            <PropertyName>Url</PropertyName>
+                            <_dataType>Expression</_dataType>
+                            <_expression>"https://graph.microsoft.com/v1.0/me/drive/root:/RPA:/children"</_expression>
+                            <_screenShotBase64 i:nil="true" />
+                            <_value i:nil="true" />
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                          <PropertyValue z:Id="i80">
+                            <PropertyName>Headers</PropertyName>
+                            <_dataType>Value</_dataType>
+                            <_expression i:nil="true" />
+                            <_screenShotBase64 i:nil="true" />
+                            <_value xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.Collections" i:type="d15p1:DictionarySettings">
+                              <d15p1:ArgumentsToCompile xmlns:d16p1="http://schemas.datacontract.org/2004/07/BR.Core">
+                                <d16p1:ArgumentItem z:Id="i81">
+                                  <d16p1:ArgumentName>Authorization</d16p1:ArgumentName>
+                                  <d16p1:Expression>"Bearer "+ vAccessToken</d16p1:Expression>
+                                  <d16p1:Type>System.Object</d16p1:Type>
+                                </d16p1:ArgumentItem>
+                              </d15p1:ArgumentsToCompile>
+                            </_value>
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                          <PropertyValue z:Id="i82">
+                            <PropertyName>ContentResult</PropertyName>
+                            <_dataType>Expression</_dataType>
+                            <_expression>vCrearReportesResponse</_expression>
+                            <_screenShotBase64 i:nil="true" />
+                            <_value i:nil="true" />
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                          <PropertyValue z:Id="i83">
+                            <PropertyName>Status</PropertyName>
+                            <_dataType>Expression</_dataType>
+                            <_expression></_expression>
+                            <_screenShotBase64 i:nil="true" />
+                            <_value i:nil="true" />
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                          <PropertyValue z:Id="i84">
+                            <PropertyName>Method</PropertyName>
+                            <_dataType>Value</_dataType>
+                            <_expression i:nil="true" />
+                            <_screenShotBase64 i:nil="true" />
+                            <_value xmlns:d15p1="http://schemas.datacontract.org/2004/07/Activities.HTTP" i:type="d15p1:HTTPResponsesWithFile.TypeMethod">Post</_value>
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                          <PropertyValue z:Id="i85">
+                            <PropertyName>PostData</PropertyName>
+                            <_dataType>Expression</_dataType>
+                            <_expression>"{\"name\":\"Reportes\",\"folder\":{},\"@microsoft.graph.conflictBehavior\":\"replace\"}"</_expression>
+                            <_screenShotBase64 i:nil="true" />
+                            <_value i:nil="true" />
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                          <PropertyValue z:Id="i86">
+                            <PropertyName>ContenDataType</PropertyName>
+                            <_dataType>Expression</_dataType>
+                            <_expression>"application/json"</_expression>
+                            <_screenShotBase64 i:nil="true" />
+                            <_value i:nil="true" />
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                        </PropertyValues>
+                        <SelectedOptionId>0</SelectedOptionId>
+                        <AutoCloseMode>None</AutoCloseMode>
+                        <EnableStatus>true</EnableStatus>
+                        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                        <RetryCount>-1</RetryCount>
+                        <Text>Crear Carpeta Reportes</Text>
+                        <_activityFullName>Activities.HTTP.HTTPResponsesWithFile</_activityFullName>
+                      </AbstractStep>
+                      <AbstractStep z:Id="i87" i:type="ExecutedStep">
+                        <Childs />
+                        <Id>b942d3d5-a367-4370-b47f-b3875634e078</Id>
+                        <Parent z:Ref="i68" />
+                        <PropertyValues>
+                          <PropertyValue z:Id="i88">
+                            <PropertyName>Text</PropertyName>
+                            <_dataType>Expression</_dataType>
+                            <_expression>"Se ha creado correctamente la ruta RPA/Reportes"</_expression>
+                            <_screenShotBase64 i:nil="true" />
+                            <_value i:nil="true" />
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                        </PropertyValues>
+                        <SelectedOptionId i:nil="true" />
+                        <AutoCloseMode>None</AutoCloseMode>
+                        <EnableStatus>true</EnableStatus>
+                        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                        <RetryCount>-1</RetryCount>
+                        <Text>Log ruta creada RPA/Reportes</Text>
+                        <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+                      </AbstractStep>
+                    </Childs>
+                    <Id>36adf21a-3d00-40c2-9179-7e5d3f879697</Id>
+                    <Parent z:Ref="i67" />
+                    <PropertyValues />
+                    <SelectedOptionId i:nil="true" />
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
+                  </AbstractStep>
+                  <AbstractStep z:Id="i89" i:type="ExecutedStep">
+                    <Childs>
+                      <AbstractStep z:Id="i90" i:type="ExecutedStep">
+                        <Childs />
+                        <Id>fed289b6-0153-474f-88c3-277d657dddea</Id>
+                        <Parent z:Ref="i89" />
+                        <PropertyValues>
+                          <PropertyValue z:Id="i91">
+                            <PropertyName>Text</PropertyName>
+                            <_dataType>Expression</_dataType>
+                            <_expression>"La ruta RPA/Reportes ya existe"</_expression>
+                            <_screenShotBase64 i:nil="true" />
+                            <_value i:nil="true" />
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                        </PropertyValues>
+                        <SelectedOptionId i:nil="true" />
+                        <AutoCloseMode>None</AutoCloseMode>
+                        <EnableStatus>true</EnableStatus>
+                        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                        <RetryCount>-1</RetryCount>
+                        <Text>Log ruta creada RPA/Reportes</Text>
+                        <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+                      </AbstractStep>
+                    </Childs>
+                    <Id>f8beff98-9f03-4570-9272-cdda8ac88880</Id>
+                    <Parent z:Ref="i67" />
+                    <PropertyValues />
+                    <SelectedOptionId i:nil="true" />
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
+                  </AbstractStep>
+                </Childs>
+                <Id>b11ef95a-2a87-4319-abbc-309e7181169a</Id>
+                <Parent z:Ref="i60" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i92">
+                    <PropertyName>Condition</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>vRutaReportes.Contains("itemNotFound")</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.If</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>5aafc63e-572f-4c56-a0e4-ca33f905fc05</Id>
+            <Parent z:Ref="i59" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Try</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i93" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i94" i:type="ExecutedStep">
+                <Childs />
+                <Id>fcb317f2-b28c-4aa1-8d0c-c3fd2440f4c1</Id>
+                <Parent z:Ref="i93" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i95">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"Ocurrio uno error al obtener el access token :"+exValidarCarpeta.Message</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i96">
+                    <PropertyName>Exception</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>exAccesToken</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId>0</SelectedOptionId>
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.ThrowException</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>6d8923d3-fe35-4d21-bd9e-78407656ddb3</Id>
+            <Parent z:Ref="i59" />
+            <PropertyValues>
+              <PropertyValue z:Id="i97">
+                <PropertyName>Exception</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>exValidarCarpeta</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Catch</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i98" i:type="ExecutedStep">
+            <Childs />
+            <Id>19e2cee6-de6e-411f-bd34-9cb824eb73b8</Id>
+            <Parent z:Ref="i59" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Finally</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>e53cf6e2-09ec-4f90-97c4-f0f152ba157c</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Validar Ruta OneDrive</Text>
+        <_activityFullName>BR.Core.Base.TryCatch</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i99" i:type="ExecutedStep">
         <Childs />
-        <Id>492c9e9f-2cb6-4cf7-9f91-605746a7a8d7</Id>
+        <Id>817e32ed-4e9a-42ed-b385-e2f2d3f025f4</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i60">
-            <PropertyName>Text</PropertyName>
+          <PropertyValue z:Id="i100">
+            <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>"Fin del tratamiento de datos para trabajar."</_expression>
+            <_expression>
+System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Match(Convert.ToString(excelPath), @"\d{4}-\d{2}-\d{2}").Value, @"(\d{4})-(\d{2})-(\d{2})", "$2$3$1")
+</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i101">
+            <PropertyName>To</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>fechaReporte</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -576,19 +986,276 @@
         <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
-        <Text>Escriba el log "Fin del proceso de datos a trabajar".</Text>
-        <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+        <Text></Text>
+        <_activityFullName>BR.Core.Base.Assign</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i61" i:type="ExecutedStep">
+      <AbstractStep z:Id="i102" i:type="ExecutedStep">
         <Childs>
-          <AbstractStep z:Id="i62" i:type="ExecutedStep">
+          <AbstractStep z:Id="i103" i:type="ExecutedStep">
             <Childs>
-              <AbstractStep z:Id="i63" i:type="ExecutedStep">
+              <AbstractStep z:Id="i104" i:type="ExecutedStep">
+                <Childs />
+                <Id>5723db5f-99cb-4a58-a205-6608e373d0d3</Id>
+                <Parent z:Ref="i103" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i105">
+                    <PropertyName>Url</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"https://graph.microsoft.com/v1.0/me/drive/root:/RPA/Reportes/Reporte_"+fechaReporte+".xlsx:/content"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i106">
+                    <PropertyName>Headers</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.Collections" i:type="d11p1:DictionarySettings">
+                      <d11p1:ArgumentsToCompile xmlns:d12p1="http://schemas.datacontract.org/2004/07/BR.Core">
+                        <d12p1:ArgumentItem z:Id="i107">
+                          <d12p1:ArgumentName>Authorization</d12p1:ArgumentName>
+                          <d12p1:Expression>"Bearer "+ vAccessToken</d12p1:Expression>
+                          <d12p1:Type>System.Object</d12p1:Type>
+                        </d12p1:ArgumentItem>
+                      </d11p1:ArgumentsToCompile>
+                    </_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i108">
+                    <PropertyName>ContentResult</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>vSubirArchivo</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i109">
+                    <PropertyName>Status</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression></_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i110">
+                    <PropertyName>Method</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Activities.HTTP" i:type="d11p1:HTTPResponsesWithFile.TypeMethod">Put</_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i111">
+                    <PropertyName>PostData</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>excelFileInfo</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i112">
+                    <PropertyName>ContenDataType</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"application/octet-stream"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId>0</SelectedOptionId>
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text>Subir archivo</Text>
+                <_activityFullName>Activities.HTTP.HTTPResponsesWithFile</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i113" i:type="ExecutedStep">
+                <Childs />
+                <Id>e99bbabf-ae83-4472-9db5-d8cc6c4a4b1c</Id>
+                <Parent z:Ref="i103" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i114">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"archivo; " + vSubirArchivo</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>Activities.Interactive.MessageBox</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i115" i:type="ExecutedStep">
+                <Childs>
+                  <AbstractStep z:Id="i116" i:type="ExecutedStep">
+                    <Childs>
+                      <AbstractStep z:Id="i117" i:type="ExecutedStep">
+                        <Childs />
+                        <Id>24f117f4-d803-44e1-a114-9ca3415e70fb</Id>
+                        <Parent z:Ref="i116" />
+                        <PropertyValues>
+                          <PropertyValue z:Id="i118">
+                            <PropertyName>Text</PropertyName>
+                            <_dataType>Expression</_dataType>
+                            <_expression>"Ocurrio un error al cargar el reporte"</_expression>
+                            <_screenShotBase64 i:nil="true" />
+                            <_value i:nil="true" />
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                          <PropertyValue z:Id="i119">
+                            <PropertyName>Level</PropertyName>
+                            <_dataType>Value</_dataType>
+                            <_expression i:nil="true" />
+                            <_screenShotBase64 i:nil="true" />
+                            <_value xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.Core.Base" i:type="d15p1:LogLevel">Warn</_value>
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                        </PropertyValues>
+                        <SelectedOptionId i:nil="true" />
+                        <AutoCloseMode>None</AutoCloseMode>
+                        <EnableStatus>true</EnableStatus>
+                        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                        <RetryCount>-1</RetryCount>
+                        <Text>Log error subiendo archivo</Text>
+                        <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+                      </AbstractStep>
+                    </Childs>
+                    <Id>80aabf41-63d1-484b-bc70-a158e83cb407</Id>
+                    <Parent z:Ref="i115" />
+                    <PropertyValues />
+                    <SelectedOptionId i:nil="true" />
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
+                  </AbstractStep>
+                  <AbstractStep z:Id="i120" i:type="ExecutedStep">
+                    <Childs>
+                      <AbstractStep z:Id="i121" i:type="ExecutedStep">
+                        <Childs />
+                        <Id>56923203-19a3-42ae-ac93-d5b924d20c49</Id>
+                        <Parent z:Ref="i120" />
+                        <PropertyValues>
+                          <PropertyValue z:Id="i122">
+                            <PropertyName>Text</PropertyName>
+                            <_dataType>Expression</_dataType>
+                            <_expression>"El reporte se ha cargado correctamente en la ruta RPA/Reportes"</_expression>
+                            <_screenShotBase64 i:nil="true" />
+                            <_value i:nil="true" />
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                        </PropertyValues>
+                        <SelectedOptionId i:nil="true" />
+                        <AutoCloseMode>None</AutoCloseMode>
+                        <EnableStatus>true</EnableStatus>
+                        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                        <RetryCount>-1</RetryCount>
+                        <Text>Log archivo subido exitosamente</Text>
+                        <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+                      </AbstractStep>
+                    </Childs>
+                    <Id>ca841e75-915d-40b0-b4dc-9d6a7392b8e9</Id>
+                    <Parent z:Ref="i115" />
+                    <PropertyValues />
+                    <SelectedOptionId i:nil="true" />
+                    <AutoCloseMode>None</AutoCloseMode>
+                    <EnableStatus>true</EnableStatus>
+                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                    <RetryCount>-1</RetryCount>
+                    <Text></Text>
+                    <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
+                  </AbstractStep>
+                </Childs>
+                <Id>250995fd-0bac-47b0-b206-3136c4d74fac</Id>
+                <Parent z:Ref="i103" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i123">
+                    <PropertyName>Condition</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>vSubirArchivo.Contains("BadRequest")</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.If</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>85ce4909-b446-4787-8726-bfa75fb37505</Id>
+            <Parent z:Ref="i102" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Try</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i124" i:type="ExecutedStep">
+            <Childs />
+            <Id>c06cee60-ca55-4197-8353-3fed10838556</Id>
+            <Parent z:Ref="i102" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Catch</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i125" i:type="ExecutedStep">
+            <Childs />
+            <Id>c11b991f-1f97-49ac-a39c-2b46de465366</Id>
+            <Parent z:Ref="i102" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <AutoCloseMode>None</AutoCloseMode>
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.Finally</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>94b4a749-7bec-48c8-8e64-1360d705314d</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Subir Archivo</Text>
+        <_activityFullName>BR.Core.Base.TryCatch</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i126" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i127" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i128" i:type="ExecutedStep">
                 <Childs />
                 <Id>b3e981c4-c175-4661-a9ff-47b73b0b3f62</Id>
-                <Parent z:Ref="i62" />
+                <Parent z:Ref="i127" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i64">
+                  <PropertyValue z:Id="i129">
                     <PropertyName>Keys</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>Nombre</_expression>
@@ -596,7 +1263,7 @@
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i65">
+                  <PropertyValue z:Id="i130">
                     <PropertyName>Element</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vElementNombre</_expression>
@@ -604,7 +1271,7 @@
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i66">
+                  <PropertyValue z:Id="i131">
                     <PropertyName>SearchBy</PropertyName>
                     <_dataType>Value</_dataType>
                     <_expression i:nil="true" />
@@ -612,7 +1279,7 @@
                     <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Web.Core" i:type="d11p1:ElementSearchBy">XPath</_value>
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i67">
+                  <PropertyValue z:Id="i132">
                     <PropertyName>SearchString</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>"//*[@id='input_4']"</_expression>
@@ -620,7 +1287,7 @@
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i68">
+                  <PropertyValue z:Id="i133">
                     <PropertyName>Browser</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vChrome</_expression>
@@ -637,12 +1304,42 @@
                 <Text>Insertar Nombre</Text>
                 <_activityFullName>Activities.Web.SendKeysInElement</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i69" i:type="ExecutedStep">
+              <AbstractStep z:Id="i134" i:type="ExecutedStep">
+                <Childs />
+                <Id>4c3c3cf4-ffc3-4244-b746-a1dd732d707a</Id>
+                <Parent z:Ref="i127" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i135">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"Se ha registrado correctamente el nombre"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                  <PropertyValue z:Id="i136">
+                    <PropertyName>Level</PropertyName>
+                    <_dataType>Value</_dataType>
+                    <_expression i:nil="true" />
+                    <_screenShotBase64 i:nil="true" />
+                    <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.Core.Base" i:type="d11p1:LogLevel">Trace</_value>
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text>Escribir log nombre registrado</Text>
+                <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i137" i:type="ExecutedStep">
                 <Childs />
                 <Id>33308e9a-d24d-430f-b609-7c8ff44b90a0</Id>
-                <Parent z:Ref="i62" />
+                <Parent z:Ref="i127" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i70">
+                  <PropertyValue z:Id="i138">
                     <PropertyName>SearchBy</PropertyName>
                     <_dataType>Value</_dataType>
                     <_expression i:nil="true" />
@@ -650,7 +1347,7 @@
                     <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Web.Core" i:type="d11p1:ElementSearchBy">XPath</_value>
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i71">
+                  <PropertyValue z:Id="i139">
                     <PropertyName>SearchString</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>"/html/body/form/div[1]/ul/li[3]/div/div/span/input"</_expression>
@@ -658,7 +1355,7 @@
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i72">
+                  <PropertyValue z:Id="i140">
                     <PropertyName>Result</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vElementFecha</_expression>
@@ -666,7 +1363,7 @@
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i73">
+                  <PropertyValue z:Id="i141">
                     <PropertyName>Browser</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vChrome</_expression>
@@ -683,44 +1380,12 @@
                 <Text>Buscar Fecha</Text>
                 <_activityFullName>Activities.Web.FindElement</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i74" i:type="ExecutedStep">
-                <Childs />
-                <Id>36531e00-3125-43fd-8e66-dacb125a0ee2</Id>
-                <Parent z:Ref="i62" />
-                <PropertyValues>
-                  <PropertyValue z:Id="i75">
-                    <PropertyName>Value</PropertyName>
-                    <_dataType>Expression</_dataType>
-                    <_expression>
-System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Regex.Match(Convert.ToString(excelPath), @"\d{4}-\d{2}-\d{2}").Value, @"(\d{4})-(\d{2})-(\d{2})", "$2$3$1")
-</_expression>
-                    <_screenShotBase64 i:nil="true" />
-                    <_value i:nil="true" />
-                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                  </PropertyValue>
-                  <PropertyValue z:Id="i76">
-                    <PropertyName>To</PropertyName>
-                    <_dataType>Expression</_dataType>
-                    <_expression>fechaReporte</_expression>
-                    <_screenShotBase64 i:nil="true" />
-                    <_value i:nil="true" />
-                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                  </PropertyValue>
-                </PropertyValues>
-                <SelectedOptionId i:nil="true" />
-                <AutoCloseMode>None</AutoCloseMode>
-                <EnableStatus>true</EnableStatus>
-                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-                <RetryCount>-1</RetryCount>
-                <Text></Text>
-                <_activityFullName>BR.Core.Base.Assign</_activityFullName>
-              </AbstractStep>
-              <AbstractStep z:Id="i77" i:type="ExecutedStep">
+              <AbstractStep z:Id="i142" i:type="ExecutedStep">
                 <Childs />
                 <Id>ad0b230d-2ed0-48ed-82fa-3df774bdb531</Id>
-                <Parent z:Ref="i62" />
+                <Parent z:Ref="i127" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i78">
+                  <PropertyValue z:Id="i143">
                     <PropertyName>Keys</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>fechaReporte.ToString()</_expression>
@@ -728,7 +1393,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i79">
+                  <PropertyValue z:Id="i144">
                     <PropertyName>Element</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vElementFecha</_expression>
@@ -736,7 +1401,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i80">
+                  <PropertyValue z:Id="i145">
                     <PropertyName>SearchBy</PropertyName>
                     <_dataType>Value</_dataType>
                     <_expression i:nil="true" />
@@ -744,7 +1409,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Web.Core" i:type="d11p1:ElementSearchBy">XPath</_value>
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i81">
+                  <PropertyValue z:Id="i146">
                     <PropertyName>SearchString</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>"//*[@id='input_4']"</_expression>
@@ -752,7 +1417,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i82">
+                  <PropertyValue z:Id="i147">
                     <PropertyName>Browser</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vChrome</_expression>
@@ -769,12 +1434,34 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                 <Text>Insertar un Fecha</Text>
                 <_activityFullName>Activities.Web.SendKeysInElement</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i83" i:type="ExecutedStep">
+              <AbstractStep z:Id="i148" i:type="ExecutedStep">
+                <Childs />
+                <Id>714017a0-25e2-4aca-9c70-21d181c1c677</Id>
+                <Parent z:Ref="i127" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i149">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"Se ha registrado correctamente la fecha"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text>Escribir log fecha registrada</Text>
+                <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i150" i:type="ExecutedStep">
                 <Childs />
                 <Id>9142fe08-445e-4f42-9167-00d6e91e0548</Id>
-                <Parent z:Ref="i62" />
+                <Parent z:Ref="i127" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i84">
+                  <PropertyValue z:Id="i151">
                     <PropertyName>SearchBy</PropertyName>
                     <_dataType>Value</_dataType>
                     <_expression i:nil="true" />
@@ -782,7 +1469,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Web.Core" i:type="d11p1:ElementSearchBy">XPath</_value>
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i85">
+                  <PropertyValue z:Id="i152">
                     <PropertyName>SearchString</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>"/html/body/form/div[1]/ul/li[4]/div/div/div/div[1]/div[2]/div/div/div[3]/input"</_expression>
@@ -790,7 +1477,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i86">
+                  <PropertyValue z:Id="i153">
                     <PropertyName>Result</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vElementUpload</_expression>
@@ -798,7 +1485,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i87">
+                  <PropertyValue z:Id="i154">
                     <PropertyName>Browser</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vChrome</_expression>
@@ -815,12 +1502,12 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                 <Text>Buscar Upload</Text>
                 <_activityFullName>Activities.Web.FindElement</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i88" i:type="ExecutedStep">
+              <AbstractStep z:Id="i155" i:type="ExecutedStep">
                 <Childs />
                 <Id>c751349b-ea87-46b4-b9d3-c42c4f4ff205</Id>
-                <Parent z:Ref="i62" />
+                <Parent z:Ref="i127" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i89">
+                  <PropertyValue z:Id="i156">
                     <PropertyName>Keys</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>excelPath</_expression>
@@ -828,7 +1515,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i90">
+                  <PropertyValue z:Id="i157">
                     <PropertyName>Element</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vElementUpload</_expression>
@@ -836,7 +1523,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i91">
+                  <PropertyValue z:Id="i158">
                     <PropertyName>SearchBy</PropertyName>
                     <_dataType>Value</_dataType>
                     <_expression i:nil="true" />
@@ -844,7 +1531,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Web.Core" i:type="d11p1:ElementSearchBy">XPath</_value>
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i92">
+                  <PropertyValue z:Id="i159">
                     <PropertyName>SearchString</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>"//*[@id='input_4']"</_expression>
@@ -852,7 +1539,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i93">
+                  <PropertyValue z:Id="i160">
                     <PropertyName>Browser</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vChrome</_expression>
@@ -869,12 +1556,34 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                 <Text>Insertar Upload</Text>
                 <_activityFullName>Activities.Web.SendKeysInElement</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i94" i:type="ExecutedStep">
+              <AbstractStep z:Id="i161" i:type="ExecutedStep">
+                <Childs />
+                <Id>796b68c5-6453-4e08-9981-ee3083fc2fb7</Id>
+                <Parent z:Ref="i127" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i162">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"Se ha cargado correctamente el archivo"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text>Escribir log carga exitosa</Text>
+                <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i163" i:type="ExecutedStep">
                 <Childs />
                 <Id>0da43e9d-c725-4094-98a7-64acffc18f7d</Id>
-                <Parent z:Ref="i62" />
+                <Parent z:Ref="i127" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i95">
+                  <PropertyValue z:Id="i164">
                     <PropertyName>Keys</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>Comentario</_expression>
@@ -882,7 +1591,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i96">
+                  <PropertyValue z:Id="i165">
                     <PropertyName>SearchBy</PropertyName>
                     <_dataType>Value</_dataType>
                     <_expression i:nil="true" />
@@ -890,7 +1599,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Web.Core" i:type="d11p1:ElementSearchBy">XPath</_value>
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i97">
+                  <PropertyValue z:Id="i166">
                     <PropertyName>SearchString</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>"/html/body/form/div[1]/ul/li[5]/div/input"</_expression>
@@ -898,7 +1607,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i98">
+                  <PropertyValue z:Id="i167">
                     <PropertyName>Browser</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vChrome</_expression>
@@ -915,12 +1624,34 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                 <Text>Insertar Comentarios</Text>
                 <_activityFullName>Activities.Web.SendKeysInElement</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i99" i:type="ExecutedStep">
+              <AbstractStep z:Id="i168" i:type="ExecutedStep">
+                <Childs />
+                <Id>334249cd-de17-4877-b4c9-81708b5f2f00</Id>
+                <Parent z:Ref="i127" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i169">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"Se han registrado correctamente los comentarios"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text>Escriba log comentarios registrados</Text>
+                <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i170" i:type="ExecutedStep">
                 <Childs />
                 <Id>28acbccf-9f44-44a9-9e13-40191c52f3a6</Id>
-                <Parent z:Ref="i62" />
+                <Parent z:Ref="i127" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i100">
+                  <PropertyValue z:Id="i171">
                     <PropertyName>SearchBy</PropertyName>
                     <_dataType>Value</_dataType>
                     <_expression i:nil="true" />
@@ -928,7 +1659,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Web.Core" i:type="d11p1:ElementSearchBy">XPath</_value>
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i101">
+                  <PropertyValue z:Id="i172">
                     <PropertyName>SearchString</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>"/html/body/form/div[1]/ul/li[6]/div/div/button"</_expression>
@@ -936,7 +1667,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i102">
+                  <PropertyValue z:Id="i173">
                     <PropertyName>Result</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vElementEnviar</_expression>
@@ -944,7 +1675,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i103">
+                  <PropertyValue z:Id="i174">
                     <PropertyName>Browser</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vChrome</_expression>
@@ -961,12 +1692,12 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                 <Text>Buscar Enviar</Text>
                 <_activityFullName>Activities.Web.FindElement</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i104" i:type="ExecutedStep">
+              <AbstractStep z:Id="i175" i:type="ExecutedStep">
                 <Childs />
                 <Id>faef6fe8-7266-446e-8c21-30f8edd5f85e</Id>
-                <Parent z:Ref="i62" />
+                <Parent z:Ref="i127" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i105">
+                  <PropertyValue z:Id="i176">
                     <PropertyName>SearchBy</PropertyName>
                     <_dataType>Value</_dataType>
                     <_expression i:nil="true" />
@@ -974,7 +1705,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Web.Core" i:type="d11p1:ElementSearchBy">XPath</_value>
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i106">
+                  <PropertyValue z:Id="i177">
                     <PropertyName>SearchString</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>"/html/body/form/div[1]/ul/li[6]/div/div/button"</_expression>
@@ -982,7 +1713,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i107">
+                  <PropertyValue z:Id="i178">
                     <PropertyName>Browser</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vChrome</_expression>
@@ -999,12 +1730,12 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                 <Text></Text>
                 <_activityFullName>Activities.Web.ElementMemberCall</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i108" i:type="ExecutedStep">
+              <AbstractStep z:Id="i179" i:type="ExecutedStep">
                 <Childs />
                 <Id>04fd2f75-66c8-45e0-bd60-d1c026a0eccd</Id>
-                <Parent z:Ref="i62" />
+                <Parent z:Ref="i127" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i109">
+                  <PropertyValue z:Id="i180">
                     <PropertyName>Browser</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vChrome</_expression>
@@ -1012,7 +1743,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i110">
+                  <PropertyValue z:Id="i181">
                     <PropertyName>Element</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vElementEnviar</_expression>
@@ -1020,7 +1751,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i111">
+                  <PropertyValue z:Id="i182">
                     <PropertyName>SearchBy</PropertyName>
                     <_dataType>Value</_dataType>
                     <_expression i:nil="true" />
@@ -1028,7 +1759,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Web.Core" i:type="d11p1:ElementSearchBy">XPath</_value>
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i112">
+                  <PropertyValue z:Id="i183">
                     <PropertyName>SearchString</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>"/html/body/form/div[1]/ul/li[6]/div/div/button"</_expression>
@@ -1045,12 +1776,34 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                 <Text>Clic en Enviar </Text>
                 <_activityFullName>Activities.Web.ClickElement</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i113" i:type="ExecutedStep">
+              <AbstractStep z:Id="i184" i:type="ExecutedStep">
+                <Childs />
+                <Id>25c7f474-8a6a-4df6-96c2-58c6c82ff31d</Id>
+                <Parent z:Ref="i127" />
+                <PropertyValues>
+                  <PropertyValue z:Id="i185">
+                    <PropertyName>Text</PropertyName>
+                    <_dataType>Expression</_dataType>
+                    <_expression>"Se han registrado correctamente los comentarios"</_expression>
+                    <_screenShotBase64 i:nil="true" />
+                    <_value i:nil="true" />
+                    <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                  </PropertyValue>
+                </PropertyValues>
+                <SelectedOptionId i:nil="true" />
+                <AutoCloseMode>None</AutoCloseMode>
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text>Escriba log formuario enviado</Text>
+                <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i186" i:type="ExecutedStep">
                 <Childs />
                 <Id>230d230a-d032-415f-a6b4-9388aa0af648</Id>
-                <Parent z:Ref="i62" />
+                <Parent z:Ref="i127" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i114">
+                  <PropertyValue z:Id="i187">
                     <PropertyName>SearchBy</PropertyName>
                     <_dataType>Value</_dataType>
                     <_expression i:nil="true" />
@@ -1058,7 +1811,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value xmlns:d11p1="http://schemas.datacontract.org/2004/07/Web.Core" i:type="d11p1:ElementSearchBy">XPath</_value>
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i115">
+                  <PropertyValue z:Id="i188">
                     <PropertyName>SearchString</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>"/html/body/div[1]/div/div/p"</_expression>
@@ -1066,7 +1819,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i116">
+                  <PropertyValue z:Id="i189">
                     <PropertyName>Result</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vResultado</_expression>
@@ -1074,7 +1827,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i117">
+                  <PropertyValue z:Id="i190">
                     <PropertyName>Browser</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>vChrome</_expression>
@@ -1091,16 +1844,16 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                 <Text></Text>
                 <_activityFullName>Activities.Web.FindElement</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i118" i:type="ExecutedStep">
+              <AbstractStep z:Id="i191" i:type="ExecutedStep">
                 <Childs>
-                  <AbstractStep z:Id="i119" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i192" i:type="ExecutedStep">
                     <Childs>
-                      <AbstractStep z:Id="i120" i:type="ExecutedStep">
+                      <AbstractStep z:Id="i193" i:type="ExecutedStep">
                         <Childs />
                         <Id>77c3cc89-822c-4659-9be9-33cbdc66ad24</Id>
-                        <Parent z:Ref="i119" />
+                        <Parent z:Ref="i192" />
                         <PropertyValues>
-                          <PropertyValue z:Id="i121">
+                          <PropertyValue z:Id="i194">
                             <PropertyName>Text</PropertyName>
                             <_dataType>Expression</_dataType>
                             <_expression>"Se envio correctamente el formulario"</_expression>
@@ -1114,12 +1867,53 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                         <EnableStatus>true</EnableStatus>
                         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
                         <RetryCount>-1</RetryCount>
-                        <Text></Text>
+                        <Text>Escribir log formuario enviado correctamente</Text>
                         <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+                      </AbstractStep>
+                      <AbstractStep z:Id="i195" i:type="ExecutedStep">
+                        <Childs />
+                        <Id>1f9414a9-0ec0-41b8-a545-bdccd3b38a9e</Id>
+                        <Parent z:Ref="i192" />
+                        <PropertyValues>
+                          <PropertyValue z:Id="i196">
+                            <PropertyName>FilePath</PropertyName>
+                            <_dataType>Expression</_dataType>
+                            <_expression>@"Framework\TakeScreenshot.pix"</_expression>
+                            <_screenShotBase64 i:nil="true" />
+                            <_value i:nil="true" />
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                          <PropertyValue z:Id="i197">
+                            <PropertyName>Parameters</PropertyName>
+                            <_dataType>Value</_dataType>
+                            <_expression i:nil="true" />
+                            <_screenShotBase64 i:nil="true" />
+                            <_value xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d15p1:ArrayOfArgumentItem">
+                              <d15p1:ArgumentItem z:Id="i198">
+                                <d15p1:ArgumentName>Directory</d15p1:ArgumentName>
+                                <d15p1:Expression>Config["sucessFormDirectoryPath"].ToString()</d15p1:Expression>
+                                <d15p1:Type>System.String</d15p1:Type>
+                              </d15p1:ArgumentItem>
+                              <d15p1:ArgumentItem z:Id="i199">
+                                <d15p1:ArgumentName>FilePath</d15p1:ArgumentName>
+                                <d15p1:Expression>"succesForm.png"</d15p1:Expression>
+                                <d15p1:Type>System.String</d15p1:Type>
+                              </d15p1:ArgumentItem>
+                            </_value>
+                            <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                          </PropertyValue>
+                        </PropertyValues>
+                        <SelectedOptionId i:nil="true" />
+                        <AutoCloseMode>None</AutoCloseMode>
+                        <EnableStatus>true</EnableStatus>
+                        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                        <RetryCount>-1</RetryCount>
+                        <Text>Tomar captura</Text>
+                        <_activityFullName>BR.Core.Base.ExecuteScript</_activityFullName>
                       </AbstractStep>
                     </Childs>
                     <Id>f18fb3f9-b68a-47b4-b00c-063f90efafe2</Id>
-                    <Parent z:Ref="i118" />
+                    <Parent z:Ref="i191" />
                     <PropertyValues />
                     <SelectedOptionId i:nil="true" />
                     <AutoCloseMode>None</AutoCloseMode>
@@ -1129,14 +1923,14 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                     <Text></Text>
                     <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
                   </AbstractStep>
-                  <AbstractStep z:Id="i122" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i200" i:type="ExecutedStep">
                     <Childs>
-                      <AbstractStep z:Id="i123" i:type="ExecutedStep">
+                      <AbstractStep z:Id="i201" i:type="ExecutedStep">
                         <Childs />
                         <Id>f875892e-78ca-4c2b-8273-44efb62f3679</Id>
-                        <Parent z:Ref="i122" />
+                        <Parent z:Ref="i200" />
                         <PropertyValues>
-                          <PropertyValue z:Id="i124">
+                          <PropertyValue z:Id="i202">
                             <PropertyName>Text</PropertyName>
                             <_dataType>Expression</_dataType>
                             <_expression>"No se completo el envio del formulario"</_expression>
@@ -1155,7 +1949,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                       </AbstractStep>
                     </Childs>
                     <Id>935c2862-3a30-4817-858b-29f7e297fd63</Id>
-                    <Parent z:Ref="i118" />
+                    <Parent z:Ref="i191" />
                     <PropertyValues />
                     <SelectedOptionId i:nil="true" />
                     <AutoCloseMode>None</AutoCloseMode>
@@ -1167,9 +1961,9 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
                   </AbstractStep>
                 </Childs>
                 <Id>9a4e54ba-c22f-434d-893d-eb51772146ba</Id>
-                <Parent z:Ref="i62" />
+                <Parent z:Ref="i127" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i125">
+                  <PropertyValue z:Id="i203">
                     <PropertyName>Condition</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>(vResultado != null)
@@ -1189,7 +1983,7 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
               </AbstractStep>
             </Childs>
             <Id>96fbdee0-52e3-4c5a-8563-21216dd40dde</Id>
-            <Parent z:Ref="i61" />
+            <Parent z:Ref="i126" />
             <PropertyValues />
             <SelectedOptionId i:nil="true" />
             <AutoCloseMode>None</AutoCloseMode>
@@ -1199,14 +1993,14 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
             <Text></Text>
             <_activityFullName>BR.Core.Base.Try</_activityFullName>
           </AbstractStep>
-          <AbstractStep z:Id="i126" i:type="ExecutedStep">
+          <AbstractStep z:Id="i204" i:type="ExecutedStep">
             <Childs>
-              <AbstractStep z:Id="i127" i:type="ExecutedStep">
+              <AbstractStep z:Id="i205" i:type="ExecutedStep">
                 <Childs />
                 <Id>98170768-adb6-4a8d-8eec-57b9bc2030de</Id>
-                <Parent z:Ref="i126" />
+                <Parent z:Ref="i204" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i128">
+                  <PropertyValue z:Id="i206">
                     <PropertyName>Text</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>"Error al llenar el formulario: " + Convert.ToString(exc.Message)</_expression>
@@ -1225,9 +2019,9 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
               </AbstractStep>
             </Childs>
             <Id>778ad610-ef11-4ccb-82f4-c01e32f7ba13</Id>
-            <Parent z:Ref="i61" />
+            <Parent z:Ref="i126" />
             <PropertyValues>
-              <PropertyValue z:Id="i129">
+              <PropertyValue z:Id="i207">
                 <PropertyName>Exception</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>exc</_expression>
@@ -1244,10 +2038,10 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
             <Text></Text>
             <_activityFullName>BR.Core.Base.Catch</_activityFullName>
           </AbstractStep>
-          <AbstractStep z:Id="i130" i:type="ExecutedStep">
+          <AbstractStep z:Id="i208" i:type="ExecutedStep">
             <Childs />
             <Id>6136369e-75ca-42da-b854-b33cd28f5d24</Id>
-            <Parent z:Ref="i61" />
+            <Parent z:Ref="i126" />
             <PropertyValues />
             <SelectedOptionId i:nil="true" />
             <AutoCloseMode>None</AutoCloseMode>
@@ -1269,6 +2063,28 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
         <Text>Llenar Formulario</Text>
         <_activityFullName>BR.Core.Base.TryCatch</_activityFullName>
       </AbstractStep>
+      <AbstractStep z:Id="i209" i:type="ExecutedStep">
+        <Childs />
+        <Id>492c9e9f-2cb6-4cf7-9f91-605746a7a8d7</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i210">
+            <PropertyName>Text</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>"Fin del tratamiento de datos para trabajar."</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <AutoCloseMode>None</AutoCloseMode>
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text>Escriba el log "Fin del proceso de datos a trabajar".</Text>
+        <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+      </AbstractStep>
     </Childs>
     <Id>cf8442ad-921d-42b5-95bb-a35a499a1115</Id>
     <Parent i:nil="true" />
@@ -1284,28 +2100,28 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
   <Name>ProcessTransactionItem.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i131">
+    <Parameter z:Id="i211">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>TransactionItem</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
     </Parameter>
-    <Parameter z:Id="i132">
+    <Parameter z:Id="i212">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>Config</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
     </Parameter>
-    <Parameter z:Id="i133">
+    <Parameter z:Id="i213">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>vCnx</Name>
       <RunnerType>None</RunnerType>
       <TypeString>Activities.DataBaseSQL.Core.DataBaseShareMethodConnection</TypeString>
     </Parameter>
-    <Parameter z:Id="i134">
+    <Parameter z:Id="i214">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>vChrome</Name>
@@ -1321,22 +2137,28 @@ System.Text.RegularExpressions.Regex.Replace(System.Text.RegularExpressions.Rege
   </PlatformVersion>
   <TemplateVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" i:nil="true" />
   <Variables xmlns:d2p1="http://schemas.datacontract.org/2004/07/BR.Logic.Params">
-    <d2p1:Variable z:Id="i135">
+    <d2p1:Variable z:Id="i215">
       <d2p1:DefaultValueExpression>0</d2p1:DefaultValueExpression>
       <d2p1:Description></d2p1:Description>
       <d2p1:Name>totalInsertadas</d2p1:Name>
       <d2p1:TypeString>System.Int32</d2p1:TypeString>
     </d2p1:Variable>
-    <d2p1:Variable z:Id="i136">
+    <d2p1:Variable z:Id="i216">
       <d2p1:DefaultValueExpression>"Daniel Ortiz"</d2p1:DefaultValueExpression>
       <d2p1:Description></d2p1:Description>
       <d2p1:Name>Nombre</d2p1:Name>
       <d2p1:TypeString>System.String</d2p1:TypeString>
     </d2p1:Variable>
-    <d2p1:Variable z:Id="i137">
+    <d2p1:Variable z:Id="i217">
       <d2p1:DefaultValueExpression>"PRUEBA REAIZADA EN PIX"</d2p1:DefaultValueExpression>
       <d2p1:Description></d2p1:Description>
       <d2p1:Name>Comentario</d2p1:Name>
+      <d2p1:TypeString>System.String</d2p1:TypeString>
+    </d2p1:Variable>
+    <d2p1:Variable z:Id="i218">
+      <d2p1:DefaultValueExpression>"EwBIBMl6BAAUBKgm8k1UswUNwklmy2v7U/S+1fEAAUSizemsMHlhQPqsv7gXiHyKck9HQisnl4QrmKSUUUDx7lVUDjeNxn+k7b/Mt1a/N23sdeYhwPqG/0YhInKrM94EMDLzZS9MWxj4FMBvAXV7ZVG1WqaxzVmeJMDd4n6JixSvAnWGomGPF6mij8dmGTFELlekQnElSDeRi5oi74gWx5soy7RQKwA/XkM12TbmGnHIAkhvO0ao7Q7BvuZ3pw4QyAhA3PTDEYqclniRuc+ROal36uPNdf5AhP7uVfOorjNXTv0Fx9BhnpMW6M/aqfmLLfP/ss3hnoyjtlX3qMQBwkctrIz4W++3LjQ1JZaKN/+1uIkq+KE7K4dzo4N+vjQQZgAAEG6nYvS8NNNUFtaCynj6SngQA4YjQQtANmNZUPgudM6KNC9gk8WSMjsHMOql05CfrhF+rL5Q1WKDQZ8yF/Ieiy6b3mUoJJNjhalUjO+aT8g9KNNaXE8nypxfSfCuRPaImHfvlGC8YEeXExcfUJiQbOZ4ecQAscvPEiTq/jPDYD0/AcszetPu97iVwI7Rm+INCDT2K8EPMHphMaQ7dq6YDytnQ6RAKO55kCoaOc3TBZ09+VXq2QEqF1kCepNdPDYaL54EcFqHBxjNqBnhUt8mQo81DkNeL3YpKwBo7L8XZe5qAVgCFQkiG+9FwidrrglV0P+yJTsNBylqDC2HSEIetL4Wa8p+GtWd5RkrFmbZwbOnEHeDnZ6tt1Tc2P94fZrwtIL2X6OplLRikQGe+JmMrec+hhCYXgJOHyopCxpd4bPPNUqeSq5eE2afgydZ3EEkMab7qiPQJGapD2aYZMZbcWYgyv9FeKZiNh7Lnb5yMpvjxvscnpi+2pt6E7BnmFzyLbFAdDr8CdPWfV9a9rArJMvAbshBiLnOt3zFqWFvGO+HvEaJiIbmOCdXrvMIBAbEXfCJHFlgouTVR9gISkcTBuEgB8+PhUWcW7mAGoMlJaFJI/F7lQ7/waCklzv0mVzHZEr3vAoJlnICq8h0r9aWp/5zRTZDDktpuRVerlI28nE3Thrn+9BUVPdX5LWMaRLwKqNtkI7F5P85I6nHjMgwi2uPB8PFDnBrcaGvVGKumdA2U5L78gs/EG1uPyp/mZVIFDakvqK+gXzkqDIs090wfy33I+Y8ooaEOOD2ZPMbnUCr1oqdhVz2v4WfvqBWn89i3sOA4S9VaQuoLKMpXtHxmoyxDehB3Vc1K+muDCY5jnf8GqutyykZagTApIrir055EbzucM+wBWF1yZQ486dbug5DbqUPPqdPytp7hjMhIPcBoJ1pRwndX+L6E2x3qRY2T6ZPHhkiyTrP40pdntENmjm1JiZOAiG+vZNUikVK1YVC0KW6ayGj4oDodQrHcN5UQIGDlbCOJUZ0PucX8cWnOFZ5QZZg65awrTJGz4SxrmTax/1JAw=="</d2p1:DefaultValueExpression>
+      <d2p1:Description></d2p1:Description>
+      <d2p1:Name>vAccessToken</d2p1:Name>
       <d2p1:TypeString>System.String</d2p1:TypeString>
     </d2p1:Variable>
   </Variables>

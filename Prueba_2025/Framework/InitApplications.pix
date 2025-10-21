@@ -365,7 +365,7 @@
                 <EnableStatus>true</EnableStatus>
                 <ExceptionHandlingMode>Default</ExceptionHandlingMode>
                 <RetryCount>-1</RetryCount>
-                <Text>Escribe el log "Validando disponibilidad de la API.</Text>
+                <Text>Escribe el log Error BD</Text>
                 <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
               </AbstractStep>
               <AbstractStep z:Id="i40" i:type="ExecutedStep">
@@ -641,6 +641,14 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
+          <PropertyValue z:Id="i64">
+            <PropertyName>LaunchArgs</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>"--start-maximized"</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
         </PropertyValues>
         <SelectedOptionId i:nil="true" />
         <AutoCloseMode>None</AutoCloseMode>
@@ -650,12 +658,12 @@
         <Text></Text>
         <_activityFullName>Activities.Web.LaunchSeleniumBrowser</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i64" i:type="ExecutedStep">
+      <AbstractStep z:Id="i65" i:type="ExecutedStep">
         <Childs />
         <Id>dab5107d-2720-4f2d-a5c6-ca2fa1e3aa92</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i65">
+          <PropertyValue z:Id="i66">
             <PropertyName>SearchBy</PropertyName>
             <_dataType>Value</_dataType>
             <_expression i:nil="true" />
@@ -663,7 +671,7 @@
             <_value xmlns:d7p1="http://schemas.datacontract.org/2004/07/Web.Core" i:type="d7p1:ElementSearchBy">XPath</_value>
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i66">
+          <PropertyValue z:Id="i67">
             <PropertyName>SearchString</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>"/html/body/form/div[1]/ul/li[1]/div/div/h1"</_expression>
@@ -671,7 +679,7 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i67">
+          <PropertyValue z:Id="i68">
             <PropertyName>Result</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>vResultado</_expression>
@@ -679,7 +687,7 @@
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i68">
+          <PropertyValue z:Id="i69">
             <PropertyName>Browser</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>vChrome</_expression>
@@ -696,19 +704,19 @@
         <Text></Text>
         <_activityFullName>Activities.Web.FindElement</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i69" i:type="ExecutedStep">
+      <AbstractStep z:Id="i70" i:type="ExecutedStep">
         <Childs>
-          <AbstractStep z:Id="i70" i:type="ExecutedStep">
+          <AbstractStep z:Id="i71" i:type="ExecutedStep">
             <Childs>
-              <AbstractStep z:Id="i71" i:type="ExecutedStep">
+              <AbstractStep z:Id="i72" i:type="ExecutedStep">
                 <Childs />
                 <Id>0c31cbc6-424a-45d1-9349-cadfb7233733</Id>
-                <Parent z:Ref="i70" />
+                <Parent z:Ref="i71" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i72">
+                  <PropertyValue z:Id="i73">
                     <PropertyName>Text</PropertyName>
                     <_dataType>Expression</_dataType>
-                    <_expression>"Se envio correctamente el formulario"</_expression>
+                    <_expression>"Formulario cargado listo para ser diligenciado"</_expression>
                     <_screenShotBase64 i:nil="true" />
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -724,7 +732,7 @@
               </AbstractStep>
             </Childs>
             <Id>0e54db29-536f-4005-86b9-b482517b9acb</Id>
-            <Parent z:Ref="i69" />
+            <Parent z:Ref="i70" />
             <PropertyValues />
             <SelectedOptionId i:nil="true" />
             <AutoCloseMode>None</AutoCloseMode>
@@ -734,14 +742,14 @@
             <Text></Text>
             <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
           </AbstractStep>
-          <AbstractStep z:Id="i73" i:type="ExecutedStep">
+          <AbstractStep z:Id="i74" i:type="ExecutedStep">
             <Childs>
-              <AbstractStep z:Id="i74" i:type="ExecutedStep">
+              <AbstractStep z:Id="i75" i:type="ExecutedStep">
                 <Childs />
                 <Id>4b07492e-2f9a-4b6c-936b-81cfea1dcd30</Id>
-                <Parent z:Ref="i73" />
+                <Parent z:Ref="i74" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i75">
+                  <PropertyValue z:Id="i76">
                     <PropertyName>Text</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>"No se completo el envio del formulario"</_expression>
@@ -760,7 +768,7 @@
               </AbstractStep>
             </Childs>
             <Id>b0179c29-520d-42e9-8565-13843d588eb9</Id>
-            <Parent z:Ref="i69" />
+            <Parent z:Ref="i70" />
             <PropertyValues />
             <SelectedOptionId i:nil="true" />
             <AutoCloseMode>None</AutoCloseMode>
@@ -774,7 +782,7 @@
         <Id>df5a2d61-825a-41ef-9335-2d3cf43767ca</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i76">
+          <PropertyValue z:Id="i77">
             <PropertyName>Condition</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>(vResultado != null)
@@ -792,12 +800,12 @@
         <Text></Text>
         <_activityFullName>BR.Core.Base.If</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i77" i:type="ExecutedStep">
+      <AbstractStep z:Id="i78" i:type="ExecutedStep">
         <Childs />
         <Id>51e22f90-fda4-40a3-922b-7a3d35021835</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i78">
+          <PropertyValue z:Id="i79">
             <PropertyName>Text</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>"Fin de las peticioness realizadas."</_expression>
@@ -829,21 +837,21 @@
   <Name>InitApplications.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i79">
+    <Parameter z:Id="i80">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>Config</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
     </Parameter>
-    <Parameter z:Id="i80">
+    <Parameter z:Id="i81">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>vCnx</Name>
       <RunnerType>None</RunnerType>
       <TypeString>Activities.DataBaseSQL.Core.DataBaseShareMethodConnection</TypeString>
     </Parameter>
-    <Parameter z:Id="i81">
+    <Parameter z:Id="i82">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>vChrome</Name>
@@ -859,19 +867,19 @@
   </PlatformVersion>
   <TemplateVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" i:nil="true" />
   <Variables xmlns:d2p1="http://schemas.datacontract.org/2004/07/BR.Logic.Params">
-    <d2p1:Variable z:Id="i82">
+    <d2p1:Variable z:Id="i83">
       <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
       <d2p1:Description></d2p1:Description>
       <d2p1:Name>responseContent</d2p1:Name>
       <d2p1:TypeString>System.String</d2p1:TypeString>
     </d2p1:Variable>
-    <d2p1:Variable z:Id="i83">
+    <d2p1:Variable z:Id="i84">
       <d2p1:DefaultValueExpression></d2p1:DefaultValueExpression>
       <d2p1:Description></d2p1:Description>
       <d2p1:Name>responseStatus</d2p1:Name>
       <d2p1:TypeString>System.Int32</d2p1:TypeString>
     </d2p1:Variable>
-    <d2p1:Variable z:Id="i84">
+    <d2p1:Variable z:Id="i85">
       <d2p1:DefaultValueExpression>@"DRIVER={ODBC Driver 17 for SQL Server};Server=localhost\SQLEXPRESS01;Database=prueba_2025;Trusted_Connection=yes;"</d2p1:DefaultValueExpression>
       <d2p1:Description></d2p1:Description>
       <d2p1:Name>vStrSql</d2p1:Name>
