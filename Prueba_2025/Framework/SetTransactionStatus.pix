@@ -642,7 +642,18 @@
                             <_dataType>Value</_dataType>
                             <_expression i:nil="true" />
                             <_screenShotBase64 i:nil="true" />
-                            <_value xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d15p1:ArrayOfArgumentItem" />
+                            <_value xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d15p1:ArrayOfArgumentItem">
+                              <d15p1:ArgumentItem z:Id="i71">
+                                <d15p1:ArgumentName>vCnx</d15p1:ArgumentName>
+                                <d15p1:Expression>vCnx</d15p1:Expression>
+                                <d15p1:Type>Activities.DataBaseSQL.Core.DataBaseShareMethodConnection</d15p1:Type>
+                              </d15p1:ArgumentItem>
+                              <d15p1:ArgumentItem z:Id="i72">
+                                <d15p1:ArgumentName>vChrome</d15p1:ArgumentName>
+                                <d15p1:Expression>vChrome</d15p1:Expression>
+                                <d15p1:Type>Web.Core.WebBrowser</d15p1:Type>
+                              </d15p1:ArgumentItem>
+                            </_value>
                             <_xpathSettings xmlns:d15p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                           </PropertyValue>
                         </PropertyValues>
@@ -666,23 +677,42 @@
                     <Text></Text>
                     <_activityFullName>BR.Core.Base.Try</_activityFullName>
                   </AbstractStep>
-                  <AbstractStep z:Id="i71" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i73" i:type="ExecutedStep">
                     <Childs>
-                      <AbstractStep z:Id="i72" i:type="ExecutedStep">
+                      <AbstractStep z:Id="i74" i:type="ExecutedStep">
                         <Childs>
-                          <AbstractStep z:Id="i73" i:type="ExecutedStep">
+                          <AbstractStep z:Id="i75" i:type="ExecutedStep">
                             <Childs>
-                              <AbstractStep z:Id="i74" i:type="ExecutedStep">
+                              <AbstractStep z:Id="i76" i:type="ExecutedStep">
                                 <Childs />
                                 <Id>7b34005d-654d-43c5-bf9e-bae42275e83a</Id>
-                                <Parent z:Ref="i73" />
+                                <Parent z:Ref="i75" />
                                 <PropertyValues>
-                                  <PropertyValue z:Id="i75">
+                                  <PropertyValue z:Id="i77">
                                     <PropertyName>FilePath</PropertyName>
                                     <_dataType>Expression</_dataType>
                                     <_expression>@"Framework\KillApplications.pix"</_expression>
                                     <_screenShotBase64 i:nil="true" />
                                     <_value i:nil="true" />
+                                    <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+                                  </PropertyValue>
+                                  <PropertyValue z:Id="i78">
+                                    <PropertyName>Parameters</PropertyName>
+                                    <_dataType>Value</_dataType>
+                                    <_expression i:nil="true" />
+                                    <_screenShotBase64 i:nil="true" />
+                                    <_value xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.Core" i:type="d19p1:ArrayOfArgumentItem">
+                                      <d19p1:ArgumentItem z:Id="i79">
+                                        <d19p1:ArgumentName>vCnx</d19p1:ArgumentName>
+                                        <d19p1:Expression>vCnx</d19p1:Expression>
+                                        <d19p1:Type>Activities.DataBaseSQL.Core.DataBaseShareMethodConnection</d19p1:Type>
+                                      </d19p1:ArgumentItem>
+                                      <d19p1:ArgumentItem z:Id="i80">
+                                        <d19p1:ArgumentName>vChrome</d19p1:ArgumentName>
+                                        <d19p1:Expression>vChrome</d19p1:Expression>
+                                        <d19p1:Type>Web.Core.WebBrowser</d19p1:Type>
+                                      </d19p1:ArgumentItem>
+                                    </_value>
                                     <_xpathSettings xmlns:d19p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                                   </PropertyValue>
                                 </PropertyValues>
@@ -696,7 +726,7 @@
                               </AbstractStep>
                             </Childs>
                             <Id>ea24441a-17a6-4c32-85d9-c675a6951330</Id>
-                            <Parent z:Ref="i72" />
+                            <Parent z:Ref="i74" />
                             <PropertyValues />
                             <SelectedOptionId i:nil="true" />
                             <AutoCloseMode>None</AutoCloseMode>
@@ -706,10 +736,10 @@
                             <Text></Text>
                             <_activityFullName>BR.Core.Base.Try</_activityFullName>
                           </AbstractStep>
-                          <AbstractStep z:Id="i76" i:type="ExecutedStep">
+                          <AbstractStep z:Id="i81" i:type="ExecutedStep">
                             <Childs />
                             <Id>a74e9e29-6cdb-4a26-b62c-0fc54116345b</Id>
-                            <Parent z:Ref="i72" />
+                            <Parent z:Ref="i74" />
                             <PropertyValues />
                             <SelectedOptionId i:nil="true" />
                             <AutoCloseMode>None</AutoCloseMode>
@@ -721,7 +751,7 @@
                           </AbstractStep>
                         </Childs>
                         <Id>bcd77e24-bde5-473e-bd2f-c5b09c842775</Id>
-                        <Parent z:Ref="i71" />
+                        <Parent z:Ref="i73" />
                         <PropertyValues />
                         <SelectedOptionId i:nil="true" />
                         <AutoCloseMode>None</AutoCloseMode>
@@ -755,12 +785,12 @@
                 <Text></Text>
                 <_activityFullName>BR.Core.Base.TryCatch</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i77" i:type="ExecutedStep">
+              <AbstractStep z:Id="i82" i:type="ExecutedStep">
                 <Childs />
                 <Id>26400fc1-2bdb-4aed-87a1-896b4a15dc30</Id>
                 <Parent z:Ref="i35" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i78">
+                  <PropertyValue z:Id="i83">
                     <PropertyName>Text</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>"Transaction with a technical error."</_expression>
@@ -777,12 +807,12 @@
                 <Text>Escribe un log "Transacción con error técnico".</Text>
                 <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i79" i:type="ExecutedStep">
+              <AbstractStep z:Id="i84" i:type="ExecutedStep">
                 <Childs />
                 <Id>cd642290-a458-4cec-96e7-a5ee4640f3c5</Id>
                 <Parent z:Ref="i35" />
                 <PropertyValues>
-                  <PropertyValue z:Id="i80">
+                  <PropertyValue z:Id="i85">
                     <PropertyName>Value</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>default(System.Exception)</_expression>
@@ -790,7 +820,7 @@
                     <_value i:nil="true" />
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
-                  <PropertyValue z:Id="i81">
+                  <PropertyValue z:Id="i86">
                     <PropertyName>To</PropertyName>
                     <_dataType>Expression</_dataType>
                     <_expression>SystemException</_expression>
@@ -823,7 +853,7 @@
         <Id>03ea218d-c67a-4682-8ddf-7a11f5db52c5</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i82">
+          <PropertyValue z:Id="i87">
             <PropertyName>Condition</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>SystemException is null &amp; BusinessException is null</_expression>
@@ -840,12 +870,12 @@
         <Text></Text>
         <_activityFullName>BR.Core.Base.If</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i83" i:type="ExecutedStep">
+      <AbstractStep z:Id="i88" i:type="ExecutedStep">
         <Childs />
         <Id>ba448689-6b1b-4521-a78f-06ae33a88f6e</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i84">
+          <PropertyValue z:Id="i89">
             <PropertyName>Text</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>"Finalización del trabajo con el estado de la transacción."</_expression>
@@ -877,47 +907,61 @@
   <Name>SetTransactionStatus.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i85">
+    <Parameter z:Id="i90">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>SystemException</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Exception</TypeString>
     </Parameter>
-    <Parameter z:Id="i86">
+    <Parameter z:Id="i91">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>TransactionNumber</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Int32</TypeString>
     </Parameter>
-    <Parameter z:Id="i87">
+    <Parameter z:Id="i92">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>RetryNumber</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Int32</TypeString>
     </Parameter>
-    <Parameter z:Id="i88">
+    <Parameter z:Id="i93">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>Config</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
     </Parameter>
-    <Parameter z:Id="i89">
+    <Parameter z:Id="i94">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>TransactionItem</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]</TypeString>
     </Parameter>
-    <Parameter z:Id="i90">
+    <Parameter z:Id="i95">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>BusinessException</Name>
       <RunnerType>None</RunnerType>
       <TypeString>PIX.Core.Exceptions.BusinessRuleException</TypeString>
+    </Parameter>
+    <Parameter z:Id="i96">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>vCnx</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>Activities.DataBaseSQL.Core.DataBaseShareMethodConnection</TypeString>
+    </Parameter>
+    <Parameter z:Id="i97">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>vChrome</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>Web.Core.WebBrowser</TypeString>
     </Parameter>
   </Params>
   <PlatformVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System">

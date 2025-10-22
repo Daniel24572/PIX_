@@ -67,7 +67,7 @@
                     <_xpathSettings xmlns:d11p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                   </PropertyValue>
                 </PropertyValues>
-                <SelectedOptionId>0</SelectedOptionId>
+                <SelectedOptionId>1</SelectedOptionId>
                 <AutoCloseMode>None</AutoCloseMode>
                 <EnableStatus>true</EnableStatus>
                 <ExceptionHandlingMode>Default</ExceptionHandlingMode>
