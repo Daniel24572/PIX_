@@ -1,7 +1,7 @@
 # 📊 Automatización de Reporte de Productos con PIX Studio
 
 ## 🧩 Descripción del proyecto
-Este proyecto automatiza el flujo completo de **extracción de datos desde SQL Server**, **creación y llenado de un reporte Excel (.xlsx)**, y finalmente **envía el archivo a través de un formulario web (Jotform)**.  
+Este proyecto automatiza el flujo completo de **extracción de datos desde SQL Server**, **creación y llenado de un reporte Excel (.xlsx)**, **subida del archivo a OneDrive**, y finalmente **envío del archivo a través de un formulario web (Jotform)**.  
 
 Está desarrollado íntegramente en **PIX Studio**, utilizando actividades de **Excel Interop**, **Selenium**, **SQL**, y control de flujo avanzado (**Try/Catch/Finally**, validaciones y logs).
 
@@ -93,7 +93,17 @@ Cada bloque comienza en la celda **A1** y crea automáticamente el archivo si no
 
 ---
 
-### 5️⃣ Formateo y extracción de fecha
+### 5️⃣ Subida del archivo a OneDrive
+Una vez completado el reporte, el archivo Excel se **sube automáticamente a OneDrive** utilizando el token de acceso (`vAccessToken`).  
+
+El flujo realiza una llamada HTTP con el archivo en binario (`fileBytes`) y la ruta de destino dinámica basada en la fecha actual.
+
+📌 **Importante:**  
+El valor de `vAccessToken` se configura en el bloque **ProcessTransactionItem**, y es requerido para autorizar la subida al almacenamiento de OneDrive.
+
+---
+
+### 6️⃣ Formateo y extracción de fecha
 Se extrae la fecha desde el nombre del archivo Excel para mostrarla en formato `MMddyyyy`:
 
 ```csharp
@@ -107,7 +117,7 @@ Reporte_2025-10-19.xlsx → 10192025
 
 ---
 
-### 6️⃣ Envío del reporte mediante formulario web
+### 7️⃣ Envío del reporte mediante formulario web
 Se utilizó **Selenium en PIX** con las siguientes acciones:
 
 #### 1. Iniciar navegador
@@ -117,13 +127,13 @@ https://form.jotform.com/252916633634057
 ```
 
 #### 2. Llenar campos del formulario
-- **Nombre:** `"Daniel"`
-- **Fecha:** `fechaFormateada`
+- **Nombre:** `"Daniel"`  
+- **Fecha:** `fechaFormateada`  
 - **Upload:** ruta del archivo Excel (`excelPath`)
 
 ---
 
-### 7️⃣ Scroll y clic controlado
+### 8️⃣ Scroll y clic controlado
 Para garantizar que el botón de envío sea visible antes de hacer clic:
 - Se usa la acción `ScrollIntoView` en el XPath del botón.
 - Luego, un **If (vElementEnviar != "")** valida su existencia antes del clic.
@@ -136,8 +146,8 @@ Y se lanza una excepción personalizada.
 
 ---
 
-### 8️⃣ Control de errores (Try/Catch/Finally)
-Todas las secciones críticas (SQL, Excel, Selenium) están encapsuladas con manejo de errores robusto.
+### 9️⃣ Control de errores (Try/Catch/Finally)
+Todas las secciones críticas (SQL, Excel, OneDrive, Selenium) están encapsuladas con manejo de errores robusto.
 
 Ejemplo de captura:
 ```csharp
@@ -150,6 +160,10 @@ Trace Info → "Se envió correctamente el formulario."
 Trace Error → "Error al llenar el formulario: " + exc.Message
 ```
 
+⚠️ **Nota adicional:**  
+En caso de que aparezca una excepción no controlada, es posible que se deba a un valor incorrecto o nulo en la variable `vAccessToken` de OneDrive.  
+Este valor se asigna dentro del bloque **ProcessTransactionItem**, y es necesario para autorizar correctamente la subida del archivo.
+
 ---
 
 ## 🧠 Flujo final resumido
@@ -158,11 +172,12 @@ Trace Error → "Error al llenar el formulario: " + exc.Message
 2. Crea carpeta si no existe.  
 3. Consulta SQL de productos y resumen.  
 4. Llena las dos hojas del Excel (Hoja1 y Hoja2).  
-5. Genera la fecha formateada desde el nombre del archivo.  
-6. Abre navegador con Selenium.  
-7. Llena el formulario y sube el archivo Excel.  
-8. Hace scroll y clic controlado en Enviar.  
-9. Escribe logs y maneja excepciones de ejecución.  
+5. Sube el archivo generado a OneDrive.  
+6. Genera la fecha formateada desde el nombre del archivo.  
+7. Abre navegador con Selenium.  
+8. Llena el formulario y sube el archivo Excel.  
+9. Hace scroll y clic controlado en Enviar.  
+10. Escribe logs y maneja excepciones de ejecución.  
 
 ---
 
@@ -174,11 +189,12 @@ Trace Error → "Error al llenar el formulario: " + exc.Message
 | PIX Studio | Entorno principal de automatización. |
 | Selenium | Control de navegador. |
 | SQL Server | Fuente de datos principal. |
+| OneDrive API | Destino para almacenamiento del reporte. |
 
 ---
 
 ## ✅ Resultado final
-El bot genera, llena y sube automáticamente un archivo Excel con la siguiente estructura:
+El bot genera, llena, sube a OneDrive y posteriormente envía automáticamente un archivo Excel con la siguiente estructura:
 
 ### Hoja1 – Productos
 | idProducto | Nombre | Categoria | Descripcion | Precio | FechaCreacion |
@@ -197,7 +213,7 @@ El bot genera, llena y sube automáticamente un archivo Excel con la siguiente e
 
 ## 🧾 Créditos
 **Desarrollado por:** Daniel Ortiz Correa  
-**Herramientas:** PIX Studio, SQL Server, Excel Interop, Selenium  
+**Herramientas:** PIX Studio, SQL Server, Excel Interop, Selenium, OneDrive API
 
 ---
 
@@ -205,6 +221,7 @@ El bot genera, llena y sube automáticamente un archivo Excel con la siguiente e
 - El Excel se genera directamente al escribir los datos (sin scripts externos).  
 - Cada ejecución crea un archivo nuevo con la fecha actual.  
 - El flujo es escalable y adaptable a otros formularios o estructuras SQL.  
+- En caso de error durante la subida a OneDrive, verificar la variable `vAccessToken` en ProcessTransactionItem.  
 
 ---
 
